@@ -22,6 +22,11 @@ I will develop a single-page application featuring a map of my neighborhood or a
 - I used foursquare api as third party api.
 - All information about my locations are from foursquare.
 
+## How to use the Project
+- You can connect to the application [here]( https://leachung41.github.io/NeighbourhoodMap/). Or you can find index.html file in [my repository](https://github.com/leachung41/NeighbourhoodMap).
+- If you click the marker on the map, it shows its information from foursquare.
+- If you search the locations on the list in a search box, it shows the result both list view and map.
+
 
 ## References
 - [Udacity - JavaScript Design Patterns](https://www.udacity.com/course/javascript-design-patterns--ud989)
