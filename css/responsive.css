@@ -9,6 +9,7 @@
 
   #location-search {
     width: 175px;
+    margin: 0px;
     padding: 5px 0 5px 25px;
     font-size: 0.9em;
     background: white url('magnifying-glass.png') 4px 5px no-repeat;
