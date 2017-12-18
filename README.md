@@ -6,15 +6,15 @@ I will develop a single-page application featuring a map of my neighborhood or a
 2. I will then research and implement third-party APIs that provide additional information about each of these locations (such as StreetView images, Wikipedia articles, Yelp reviews, etc).
 
 ## Project Details
-1. **Knockout framework**
-  - I made a neighborhood map and bound index.html and app.js using knockoutjs.
-  - I connected my locations with google maps markers. And also I made a filter to search my locations.
-2. **Google Maps API**
-  - I got a google maps api key and using to load map.
-  - I made markers to display my locations and show their own information.
-3. **FourSquare API**
-  - I used foursquare api as third party APi.
-  - All information about my locations are from foursquare.
+**1. Knockout framework**
+    - I made a neighborhood map and bound index.html and app.js using knockoutjs.
+    - I connected my locations with google maps markers. And also I made a filter to search my locations.
+**2. Google Maps API**
+    - I got a google maps api key and using to load map.
+    - I made markers to display my locations and show their own information.
+**3. FourSquare API**
+    - I used foursquare api as third party APi.
+    - All information about my locations are from foursquare.
 
 
 ## References
