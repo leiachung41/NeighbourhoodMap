@@ -1,6 +1,6 @@
 // Make a data locations in Toronto Neighbourhood.
 var locationList = [
-  {name: 'Meow Cat Cafe', location: {lat: 43.702967, lng: -79.388328}},
+  {name: 'Yorkdale Shopping Centre', location: {lat: 43.725422, lng: -79.452106}},
   {name: 'Casa Loma', location: {lat: 43.678066, lng: -79.409426}},
   {name: 'IKEA Etobicoke', location: {lat:  43.61864, lng: -79.534625}},
   {name: 'Rooster Coffee House', location: {lat: 43.669105, lng: -79.352863}},
@@ -20,8 +20,8 @@ var map;
 var initMap = function() {
   //Create a google map object.
   map = new google.maps.Map(document.getElementById('map'),{
-    center: {lat: 43.666676, lng: -79.403762},
-    zoom: 12,
+    center: {lat: 43.686939, lng: -79.48949},
+    zoom: 11,
     styles: styles,
     mapTypeControl: false
   });
@@ -101,14 +101,19 @@ var viewModel = function() {
         infoWindow.open(map, marker);
         // Make a content for infowindow from FourSquare
         infoWindow.setContent(
-          '<div class="infowindow"><h2><span>' + marker.name + '</span></h2>' +
+          '<div class="infowindow">' +
+          '<h2><span>' + marker.name + '</span></h2>' +
           '<ul><li class="info-li">Rating: ' + results.response.groups[0].items[0].venue.rating + '</li>' +
           '<li class="info-li">Phone: ' + results.response.groups[0].items[0].venue.contact.formattedPhone + '</li>' +
           '<li class="info-li">Address: ' + results.response.groups[0].items[0].venue.location.address + '</li>' +
           '<li class="info-li">URL: <a class="info-a" href=' + results.response.groups[0].items[0].venue.url + '>' +
           results.response.groups[0].items[0].venue.url + '</a></ul></div>');
           clearTimeout(forsquareRequestTimeOut);
-        }
+        },
+      error: function () {
+        infoWindow.setContent("<h4> SORRY. Could not Load. Refresh again, please.</h4>");
+        infoWindow.open(map, marker);
+      }
     });
 
     // When marker is clicked, it bounces for 1 second.

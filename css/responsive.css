@@ -8,6 +8,7 @@
   }
 
   #location-search {
+    -webkit-appearance: none;
     width: 175px;
     margin: 0px;
     padding: 5px 0 5px 25px;
@@ -16,7 +17,6 @@
     background-size: 8%;
     border: none;
     border-radius: 0px;
-    -webkit-appearance: none;
   }
   #location-list {
     font-size: 0.9em;
