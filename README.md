@@ -2,8 +2,9 @@
 I will develop a single-page application featuring a map of my neighborhood or a neighborhood I would like to visit.
 
 ## Project Goals
-1. I will then add additional functionality to this application, including: map markers to identify popular locations or places I’d like to visit, a search function to easily discover these locations, and a listview to support simple browsing of all locations.
-2. I will then research and implement third-party APIs that provide additional information about each of these locations (such as StreetView images, Wikipedia articles, Yelp reviews, etc).
+
+  -  I will then add additional functionality to this application, including: map markers to identify popular locations or places I’d like to visit, a search function to easily discover these locations, and a listview to support simple browsing of all locations.
+  -  I will then research and implement third-party APIs that provide additional information about each of these locations (such as StreetView images, Wikipedia articles, Yelp reviews, etc).
 
 ## Project Details
 **1. Knockout framework**
