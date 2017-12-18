@@ -1,5 +1,5 @@
 # Project: Neighbourhood Map
-I will develop a single-page application featuring a map of my neighborhood or a neighborhood I would like to visit.
+I will develop a single-page application featuring a map of my neighbourhood or a neighbourhood I would like to visit.
 
 ## Project Goals
 
