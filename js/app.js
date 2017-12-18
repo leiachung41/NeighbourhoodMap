@@ -28,6 +28,7 @@ var initMap = function() {
 
   //Bind viewModel to knockout.
   ko.applyBindings(new viewModel());
+
 };
 
 // Google map error handling.

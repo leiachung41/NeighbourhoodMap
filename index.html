@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Toronto Neighbourhood</title>
     <link rel="stylesheet" href="css/main.css">
@@ -13,7 +13,7 @@
     <div class="container">
       <div class="listview">
         <h1><a href="index.html">Toronto Neighbourhood</a></h1>
-        <input id="location-search" type="text" placeholder="Search a location" data-bind = "value: userInput, valueUpdate: 'keyup'">
+        <input id="location-search" type="text" placeholder="Search a location .." data-bind = "value: userInput, valueUpdate: 'keyup'">
         <ul id="location-list" data-bind="foreach: filteredList">
           <li class="list-item" data-bind="text: name, click: $parent.locationClicked"></li>
         </ul>
