@@ -8,10 +8,19 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div class="container">
+      <div class="navbar">
+        <h1><a href="index.html">Toronto Neighbourhood</a></h1>
+        <input id="location-search" type="text" placeholder="Search a location" data-bind = "value: userInput, valueUpdate: 'keyup'">
+        <ul id="location-list" data-bind="foreach: filteredList">
+          <li class="list-item" data-bind="text: name, click: $parent.locationClicked"></li>
+        </ul>
+      </div>
+    </div>
     <div id="map"></div>
 
-    <script src="js/lib/jQuery.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/lib/jQuery.js"></script>
     <script src="js/lib/knockout-3.4.2.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQAja5NfsSlvhiB4rH_ySC9f3MD6NKv8Y&callback=initMap"></script>
   </body>
