@@ -20,7 +20,7 @@ var map;
 var initMap = function() {
   //Create a google map object.
   map = new google.maps.Map(document.getElementById('map'),{
-    center: {lat: 43.677871, lng: -79.443047},
+    center: {lat: 43.666676, lng: -79.403762},
     zoom: 12,
     styles: styles,
     mapTypeControl: false
@@ -105,7 +105,7 @@ var viewModel = function() {
           '<ul><li class="info-li">Rating: ' + results.response.groups[0].items[0].venue.rating + '</li>' +
           '<li class="info-li">Phone: ' + results.response.groups[0].items[0].venue.contact.formattedPhone + '</li>' +
           '<li class="info-li">Address: ' + results.response.groups[0].items[0].venue.location.address + '</li>' +
-          '<li class="info-li">URL: <a href=' + results.response.groups[0].items[0].venue.url + '>' +
+          '<li class="info-li">URL: <a class="info-a" href=' + results.response.groups[0].items[0].venue.url + '>' +
           results.response.groups[0].items[0].venue.url + '</a></ul></div>');
           clearTimeout(forsquareRequestTimeOut);
         }

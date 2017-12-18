@@ -13,26 +13,34 @@ html, body {
 
 .listview {
   height: 100%;
-  width: 300px;
+  width: 200px;
   background-color: #150a04;
+}
+.menu {
+  left: 200px;
+	position: absolute;
+	z-index: 5;
+	transition: all .3s ease;
+}
+
+#icon {
+	padding: 3px 6px;
+	width: 40px;
+	height: 40px;
+	z-index: 5;
+  fill: #150a04;
 }
 
 h1 {
   margin: 0;
-  padding: 25px 0;
-  font-size: 1.5rem;
+  padding: 15px 20px;
+  font-size: 1.5em;
   text-align: center;
+  background-color: #e9b195;
 }
 
-h1 a:hover {
+a {
   color: #150a04;
-  background-color: #f2d1c0;
-}
-
-h1 a {
-  padding: 6px;
-  color: #fbf0ea;
-  border: dotted 1.2px;
   text-decoration: none;
 }
 
@@ -74,9 +82,12 @@ h1 a {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
   bottom: 0px;
-  left: 300px;
+  left: 200px;
   right: 0px;
+  transform: translate(0,0);
+  transition: all .3s ease;
 }
 
 .infowindow {
@@ -99,4 +110,7 @@ h1 a {
   padding: 1px 5px;
   font-size: 1.1em;
   list-style: none;
+}
+.infowindow ul .info-a {
+  color: black;
 }

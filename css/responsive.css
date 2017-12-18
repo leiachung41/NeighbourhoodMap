@@ -1,21 +1,19 @@
 @media screen and (max-width: 700px) {
   .listview {
-    width: 180px;
+    width: 200px;
   }
   h1 {
-    padding: 10px;
+    padding: 10px 5px;
     font-size: 0.9em;
   }
-  h1 a {
-    padding: 4px;
-    border: dotted 0.6px;
-  }
+
   #location-search {
-    width: 155px;
+    width: 175px;
     padding: 5px 0 5px 25px;
     font-size: 0.9em;
-    background: white url('magnifying-glass.png') 4px 6px no-repeat;
-    background-size: 9%;
+    background: white url('magnifying-glass.png') 4px 5px no-repeat;
+    background-size: 8%;
+    border: none;
   }
   #location-list {
     font-size: 0.9em;
@@ -25,6 +23,6 @@
   }
   #map {
     height: 100%;
-    left: 180px;
+    left: 200px;
   }
 }
