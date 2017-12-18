@@ -14,12 +14,12 @@ I will develop a single-page application featuring a map of my neighborhood or a
 
 **2. Google Maps API**
 
-- I got a google maps api key and using to load map.
+- I got a google maps api key and using to load map with my locations.
 - I made markers to display my locations and show their own information.
 
 **3. FourSquare API**
 
-- I used foursquare api as third party APi.
+- I used foursquare api as third party api.
 - All information about my locations are from foursquare.
 
 

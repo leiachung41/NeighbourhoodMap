@@ -1,3 +1,4 @@
+// Make a data locations in Toronto Neighbourhood.
 var locationList = [
   {name: 'Meow Cat Cafe', location: {lat: 43.702967, lng: -79.388328}},
   {name: 'Casa Loma', location: {lat: 43.678066, lng: -79.409426}},
@@ -6,15 +7,18 @@ var locationList = [
   {name: 'TIFF Bell Lightbox', location: {lat:  43.646622, lng: -79.390332}}
 ];
 
+// Make location class and bindings with data.
 var Location = function (item) {
   this.name = ko.observable(item.name);
   this.location = ko.observable(item.location);
   this.marker = ko.observable();
 };
 
+// Initialize a google map.
 var map;
 
 var initMap = function() {
+  //Create a google map object.
   map = new google.maps.Map(document.getElementById('map'),{
     center: {lat: 43.677871, lng: -79.443047},
     zoom: 12,
@@ -22,51 +26,65 @@ var initMap = function() {
     mapTypeControl: false
   });
 
+  //Bind viewModel to knockout.
   ko.applyBindings(new viewModel());
 };
 
+// Google map error handling.
 var googlemapError = function() {
   $('#map').append('<h3>SORRY. Could not Load. Refresh again, please.</h3>');
 }
 
+// ViewModel
 var viewModel = function() {
   var self = this;
 
+  // Put locations in observableArray.
   this.locations = ko.observableArray ();
 
+  // ForEach loop for locationsList.
   locationList.forEach(function (item) {
+    // Create a location object.
     var location = new Location (item);
 
+    // Create a marker object.
     var marker = new google.maps.Marker({
       position: item.location,
       map: map,
       name: item.name
     });
 
+    // Infowindow click event for marker.
     marker.addListener('click', function (){
       self.openInfoWindow(this);
     });
 
+    // Create a marker property.
     location.marker = marker;
 
+    // Push created location object into observableArray.
     self.locations.push(location);
 
   });
 
+  // Create a infowindow object.
   var infoWindow = new google.maps.InfoWindow({});
 
   this.openInfoWindow = function (marker) {
 
+    // Error handling for ajax request.
     var forsquareRequestTimeOut = setTimeout(function () {
       infoWindow.setContent("<h4> SORRY. Could not Load. Refresh again, please.</h4>");
       infoWindow.open(map, marker);
-    },10000);
+    },10000); // 10sec
 
+    // Make ajax request to foursquare api endpoint.
     $.ajax({
       url: 'https://api.foursquare.com/v2/venues/explore',
       type: 'GET',
       dataType: 'json',
 
+      // Call foursquare api using my client_id and secret key.
       data: {
         client_id: '1IWMXUIXTP41LS222SE03WYUA5UV2J5UJ24JOYOYZWGIQRDQ',
         client_secret: 'O0YNHGTZBKPFJK3LLGCIQ3EEZ4LJRWPHUKMQCH4DGQLOXWFK',
@@ -80,6 +98,7 @@ var viewModel = function() {
 
       success: function(results) {
         infoWindow.open(map, marker);
+        // Make a content for infowindow from FourSquare
         infoWindow.setContent(
           '<div class="infowindow"><h2><span>' + marker.name + '</span></h2>' +
           '<ul><li class="info-li">Rating: ' + results.response.groups[0].items[0].venue.rating + '</li>' +
@@ -91,6 +110,7 @@ var viewModel = function() {
         }
     });
 
+    // When marker is clicked, it bounces for 1 second.
     marker.setAnimation(google.maps.Animation.BOUNCE);
       setTimeout(function () {
        marker.setAnimation(null);
@@ -98,8 +118,10 @@ var viewModel = function() {
   };
 
   this.places = ko.observableArray(self.locations());
+  // Bind input search and observable.
   this.userInput = ko.observable('');
 
+  // FilteredList for listview.
   this.filteredList = ko.computed (function () {
     return ko.utils.arrayFilter(self.places(), function(loc) {
       var filter = self.userInput().toLowerCase();
@@ -114,12 +136,15 @@ var viewModel = function() {
     });
   });
 
+  // When location is clicked from listview, it shows marker in the map.
   this.locationClicked = function (loc) {
     self.openInfoWindow(loc.marker);
   };
 
 };
 
+// Using the google maps retro theme.
+// https://mapstyle.withgoogle.com/
 var styles = [
   {
     "elementType": "geometry",
