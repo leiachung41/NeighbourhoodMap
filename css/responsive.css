@@ -1,0 +1,29 @@
+@media screen and (max-width: 700px) {
+  .listview {
+    width: 180px;
+  }
+  h1 {
+    padding: 10px;
+    font-size: 1em;
+  }
+  h1 a {
+    padding: 4px;
+    border: dotted 0.6px;
+  }
+  #location-search {
+    width: 150px;
+    padding: 5px 0 5px 25px;
+    font-size: 1em;
+    background: white url('magnifying-glass.png') 4px 6px no-repeat;
+    background-size: 9%;
+  }
+  #location-list {
+    font-size: 0.9em;
+  }
+  #location-list li {
+    padding: 8px 9px;
+  }
+  #map {
+    left: 180px;
+  }
+}
