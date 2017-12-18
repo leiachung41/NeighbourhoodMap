@@ -3,29 +3,29 @@ I will develop a single-page application featuring a map of my neighborhood or a
 
 ## Project Goals
 
-  -  I will then add additional functionality to this application, including: map markers to identify popular locations or places I’d like to visit, a search function to easily discover these locations, and a listview to support simple browsing of all locations.
-  -  I will then research and implement third-party APIs that provide additional information about each of these locations (such as StreetView images, Wikipedia articles, Yelp reviews, etc).
+-  I will then add additional functionality to this application, including: map markers to identify popular locations or places I’d like to visit, a search function to easily discover these locations, and a list view to support simple browsing of all locations.
+-  I will then research and implement third-party APIs that provide additional information about each of these locations. (such as Street View images, Wikipedia articles, Yelp reviews, etc.)
 
 ## Project Details
 **1. Knockout framework**
 
-  - I made a neighborhood map and bound index.html and app.js using knockoutjs.
-  - I connected my locations with google maps markers. And also I made a filter to search my locations.
+- I made a neighborhood map and bound index.html and app.js using Knockout.js.
+- I connected my locations with google maps markers. And also I made a filter to search my locations.
 
 **2. Google Maps API**
 
-- I got a google maps api key and using to load map with my locations.
+- I got a google maps API key and using to load map with my locations.
 - I made markers to display my locations and show their own information.
 
 **3. FourSquare API**
 
-- I used foursquare api as third party api.
-- All information about my locations are from foursquare.
+- I used FourSquare API as third party API.
+- All information about my locations are from FourSquare.
 
-## How to use the Project
-- You can connect to the application [here]( https://leachung41.github.io/NeighbourhoodMap/). Or you can find index.html file in [my repository](https://github.com/leachung41/NeighbourhoodMap).
-- If you click the marker on the map, it shows its information from foursquare.
-- If you search the locations on the list in a search box, it shows the result both list view and map.
+## How to use the Application
+- You can connect to the application [here](https://leachung41.github.io/NeighbourhoodMap/). Or you can find index.html file in [my repository](https://github.com/leachung41/NeighbourhoodMap).
+- If you click a marker on the map, it shows its information from FourSquare.
+- If you search a location on the list in a search box, it shows the result both list view and map.
 
 
 ## References
@@ -36,5 +36,5 @@ I will develop a single-page application featuring a map of my neighborhood or a
 - [Google Maps with Multiple Markers and Info Windows using JavaScript API V3](https://www.codexworld.com/google-maps-with-multiple-markers-using-javascript-api/)
 - [Knockout.js - Documentation](http://knockoutjs.com/documentation/introduction.html)
 - [Understanding Basics of UI Design Pattern MVC, MVP and MVVM](https://www.codeproject.com/articles/228214/understanding-basics-of-ui-design-pattern-mvc-mvp)
-- [Utility Functions in KnockoutJS](http://www.knockmeout.net/2011/04/utility-functions-in-knockoutjs.html)
+- [Utility Functions in Knockout.js](http://www.knockmeout.net/2011/04/utility-functions-in-knockoutjs.html)
 - [FourSquare Developers](https://developer.foursquare.com/)
