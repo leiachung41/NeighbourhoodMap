@@ -77,6 +77,14 @@ a {
   background-color: #f2d1c0;
 }
 
+h3 {
+	position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+	z-index: 5;
+}
+
 #map {
   position: absolute;
   margin: 0;

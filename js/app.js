@@ -20,7 +20,7 @@ var map;
 var initMap = function() {
   //Create a google map object.
   map = new google.maps.Map(document.getElementById('map'),{
-    center: {lat: 43.686939, lng: -79.48949},
+    center: {lat: 43.684037, lng: -79.36474},
     zoom: 11,
     styles: styles,
     mapTypeControl: false
@@ -75,7 +75,7 @@ var viewModel = function() {
 
     // Error handling for ajax request.
     var forsquareRequestTimeOut = setTimeout(function () {
-      infoWindow.setContent("<h4> SORRY. Could not Load. Refresh again, please.</h4>");
+      infoWindow.setContent("<h4>SORRY. Could not Load. Refresh again, please.</h4>");
       infoWindow.open(map, marker);
     },10000); // 10sec
 
