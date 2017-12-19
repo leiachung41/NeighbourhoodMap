@@ -26,7 +26,7 @@ I will develop a single-page application featuring a map of my neighbourhood or 
 1. You can download the repository from [here](https://github.com/leachung41/NeighbourhoodMap).
 2. Find a index.html file in the repository, and open the index.html file in a browser.
 
-*Or you can connect to the application via online [here](https://leachung41.github.io/NeighbourhoodMap/).*
+*Or you can connect to the application via online [https://leachung41.github.io/NeighbourhoodMap/](https://leachung41.github.io/NeighbourhoodMap/).*
 
 ## How to use the Application
 - If you click a marker on the map, it shows its information from FourSquare.
